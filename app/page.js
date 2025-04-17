@@ -123,9 +123,9 @@ export default function Home() {
           {showCongrats && (
             <div className={styles.congrats}>
               {winner ? (
-                <h2>🎉 Congratulations {getSymbolOwnerName(winner)}! You win! 🎉</h2>
+                <h2>🎉Congratulations {getSymbolOwnerName(winner)}! You win! 🎉</h2>
               ) : draw ? (
-                <h2>😅 It's a draw! Well played both!</h2>
+                <h2>😅 It&apos;s a draw! Well played both!</h2>
               ) : null}
             </div>
           )}
