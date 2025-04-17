@@ -1,0 +1,114 @@
+.container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1rem auto;
+    max-width: 300px;
+  }
+  
+  .square {
+    aspect-ratio: 1 / 1;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: 2px solid #444;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .square:hover {
+    background-color: #eee;
+  }
+  
+  .square.p1 {
+    color: #e91e63; /* pink */
+  }
+  
+  .square.p2 {
+    color: #2196f3; /* blue */
+  }
+  
+  .resetButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .resetButton:hover {
+    background-color: #388e3c;
+  }
+  
+  .congrats {
+    margin-top: 20px;
+    animation: popUp 0.5s ease-in-out;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+  }
+  
+  @keyframes popUp {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .scoreboard span {
+    font-weight: bold;
+  }
+  
+  .inputWrapper input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 200px;
+    max-width: 80vw;
+  }
+  
+  
+  /* Responsive tweaks */
+  @media (max-width: 500px) {
+    .board {
+      max-width: 90vw;
+      gap: 5px;
+    }
+  
+    .square {
+      font-size: 1.5rem;
+    }
+  
+    .resetButton {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    .congrats {
+      font-size: 1.2rem;
+    }
+  }
+  
